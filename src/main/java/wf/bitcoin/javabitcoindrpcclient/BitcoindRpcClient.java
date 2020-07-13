@@ -22,9 +22,7 @@ package wf.bitcoin.javabitcoindrpcclient;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  *
@@ -1992,6 +1990,8 @@ public interface BitcoindRpcClient {
     boolean generated();
     
     RawTransaction raw();
+
+    ArrayList<HashMap<String, Object>> details();
   }
 
   static interface TransactionsSinceBlock extends Serializable {
